@@ -5,7 +5,7 @@ const commentName = document.querySelector("#name");
 const comment = document.querySelector("#comment");
 const addComment = document.querySelector("#btnConfirm");
 const singleArticle = document.querySelector("#singleArticle");
-const commentData = readFromStorage("single");
+
 //read from localstorage
 const readFromStorage = (key = "users") =>
   JSON.parse(localStorage.getItem(key)) || [];
@@ -68,6 +68,7 @@ if (articlesWrap) {
     `;
 }
 // add comment
+const commentData = readFromStorage("single");
 if (singleArticle) {
   addComment.addEventListener("click", () => {
     commentData.comment.push(`${commentName.value}: ${comment.value}`);
