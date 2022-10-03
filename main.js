@@ -1,10 +1,7 @@
 const addArticles = document.querySelector("#addArticles");
 const articlesContainer = document.querySelector("#articlesContainer");
 const articlesWrap = document.querySelector("#singleUserWrap");
-const commentName = document.querySelector("#name");
-const comment = document.querySelector("#comment");
-const addComment = document.querySelector("#btnConfirm");
-const singleArticle = document.querySelector("#singleArticle");
+
 
 //read from localstorage
 const readFromStorage = (key = "users") =>
@@ -68,6 +65,10 @@ if (articlesWrap) {
     `;
 }
 // add comment
+const commentName = document.querySelector("#name");
+const comment = document.querySelector("#comment");
+const addComment = document.querySelector("#btnConfirm");
+const singleArticle = document.querySelector("#singleArticle");
 const commentData = readFromStorage("single");
 if (singleArticle) {
   addComment.addEventListener("click", () => {
