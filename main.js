@@ -41,8 +41,8 @@ function showArticles(users) {
     p.innerText = el.content;
     let showBtn = document.createElement("button");
     showBtn.innerText = "Show";
-    showBtn.classList.add("btn", "btn-primary");
-    div.classList.add("bg-secondary");
+    showBtn.classList.add("btn", "btn-primary","m-3");
+    div.classList.add("bg-secondary","mt-3");
     div.append(h1, p, showBtn);
     articlesContainer.appendChild(div);
     showBtn.addEventListener("click", () => showSingle(el));
